@@ -1,2 +1,13 @@
 name: tis a workflow
 on: push
+
+jobs:
+  build:
+    name: action A
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./action-a
+      env:
+        MY_NAME: "Νικήτας"
+
